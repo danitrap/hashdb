@@ -1,4 +1,4 @@
 hashdb is a simple hash "decrypter".
 It will search a large database provided by goog.li for the given input.
 It requires json lib for ruby (> gem install json)
-Usage: /.hashdb.py hash
+Usage: /.hashdb.rb hash
