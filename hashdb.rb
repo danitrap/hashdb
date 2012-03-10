@@ -27,7 +27,7 @@ puts "Searching for #{query}..."
 results = hash_search( query )
 
 if (results["found"] == "false")
-  $stderr.puts("\033[31mNo matching records found for #{query}.\033[0m")
+  $stderr.puts("No matching records found for #{query}.")
   exit
 end
 
@@ -35,12 +35,12 @@ puts "Input type: #{results["type"]}."
 
 if (results["type"] != "cleartext")
   #if the argument is an hash just output the clear text
-  puts "\033[32mClear text: \033[0m" + results["hashes"]["cleartext"]
+  puts "Clear text: " + results["hashes"]["cleartext"]
 else
   #or if it is clear text let's oputput all the matching hashes!
   results["hashes"].each do |entry|
     if (entry[0] != "cleartext")
-      puts "\033[32m" + entry[0].upcase + "\033[0m: " + entry[1]
+      puts "" + entry[0].upcase + " " + entry[1]
      end
   end
 end
